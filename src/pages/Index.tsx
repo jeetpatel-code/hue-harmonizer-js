@@ -1,148 +1,194 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, CheckCircle, Globe, Shield, Clock, Award } from "lucide-react";
+import heroImage from "@/assets/hero-fabrication.jpg";
+import teamImage from "@/assets/team-engineers.jpg";
+import tanksImage from "@/assets/steel-tanks.jpg";
+import machiningImage from "@/assets/cnc-machining.jpg";
+import platformImage from "@/assets/steel-platform.jpg";
 
 const Index = () => {
+  const stats = [
+    { icon: CheckCircle, title: "20–30% Cost Savings", description: "Competitive global pricing with Canadian quality" },
+    { icon: Clock, title: "6–8 Week Delivery", description: "Efficient logistics and project management" },
+    { icon: Shield, title: "QA Packs & Reports", description: "Complete documentation and inspection reports" },
+  ];
+
+  const services = [
+    {
+      title: "Storage Tanks",
+      description: "Non-pressure steel tanks with professional coatings and safety features",
+      image: tanksImage,
+    },
+    {
+      title: "Structural Frames & Weldments",
+      description: "Custom fabricated steel platforms, guardrails, and structural assemblies",
+      image: platformImage,
+    },
+    {
+      title: "Precision Machining",
+      description: "CNC machining services for complex steel components and parts",
+      image: machiningImage,
+    },
+    {
+      title: "Quality Assurance",
+      description: "Comprehensive QA processes with full documentation and certification",
+      image: teamImage,
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-hero">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-primary opacity-90"></div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-platinum mb-6">
-            Maple Forge Hub
+      <section 
+        className="relative min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            Global Fabrication Power.
+            <span className="block text-accent">Canadian Assurance.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-silver-lake-blue mb-8 max-w-2xl mx-auto">
-            Crafting digital experiences with precision and artistry. 
-            Your vision, forged into reality.
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
+            Helping Ontario companies cut fabrication costs by 20–30% with trusted South Asian manufacturers.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-yinmn-blue hover:bg-silver-lake-blue text-platinum border-2 border-silver-lake-blue transition-all duration-300"
-            >
-              Get Started
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/contact">
+                Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-2 border-platinum text-platinum hover:bg-platinum hover:text-rich-black transition-all duration-300"
-            >
-              Learn More
+            <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
+              Download Brochures
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 bg-platinum">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-rich-black mb-16">
-            Color Palette Showcase
-          </h2>
+      {/* Quick Stats */}
+      <section className="py-12 sm:py-16 bg-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {stats.map((stat, index) => (
+              <Card key={index} className="text-center shadow-card">
+                <CardHeader className="pb-4">
+                  <div className="flex justify-center mb-3 sm:mb-4">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-accent rounded-full flex items-center justify-center">
+                      <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-lg sm:text-xl font-bold text-primary">{stat.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm sm:text-base text-muted-foreground">{stat.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Preview */}
+      <section className="py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 sm:mb-6">
+                Ontario-Based Excellence
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
+                MapleFab Solutions bridges Canadian assurance with South Asian manufacturing excellence. 
+                We help Ontario companies achieve significant cost savings while maintaining the highest 
+                quality standards and complete project transparency.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
+                Our mission is to provide reliable, cost-effective fabrication solutions that meet 
+                Canadian industrial standards while leveraging global manufacturing capabilities.
+              </p>
+              <Button variant="industrial" asChild>
+                <Link to="/about">
+                  Learn More About Us <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="relative order-1 lg:order-2">
+              <img 
+                src={teamImage} 
+                alt="Professional engineering team reviewing blueprints" 
+                className="rounded-lg shadow-hero w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview */}
+      <section className="py-12 sm:py-16 bg-muted">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 sm:mb-4">
+              Our Products & Services
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+              From precision machining to complete fabrication solutions, we deliver quality results 
+              with global efficiency and Canadian reliability.
+            </p>
+          </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Rich Black Card */}
-            <Card className="bg-rich-black border-oxford-blue">
-              <CardHeader>
-                <CardTitle className="text-platinum">Rich Black</CardTitle>
-                <CardDescription className="text-silver-lake-blue">
-                  Deep, sophisticated foundation
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="w-full h-20 bg-rich-black rounded-lg border-2 border-oxford-blue mb-4"></div>
-                <p className="text-silver-lake-blue text-sm">HSL: 211, 53%, 11%</p>
-              </CardContent>
-            </Card>
-
-            {/* Oxford Blue Card */}
-            <Card className="bg-oxford-blue border-yinmn-blue">
-              <CardHeader>
-                <CardTitle className="text-platinum">Oxford Blue</CardTitle>
-                <CardDescription className="text-silver-lake-blue">
-                  Professional depth and trust
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="w-full h-20 bg-oxford-blue rounded-lg border-2 border-yinmn-blue mb-4"></div>
-                <p className="text-silver-lake-blue text-sm">HSL: 219, 37%, 17%</p>
-              </CardContent>
-            </Card>
-
-            {/* Yinmn Blue Card */}
-            <Card className="bg-yinmn-blue border-silver-lake-blue">
-              <CardHeader>
-                <CardTitle className="text-platinum">Yinmn Blue</CardTitle>
-                <CardDescription className="text-platinum">
-                  Perfect balance and harmony
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="w-full h-20 bg-yinmn-blue rounded-lg border-2 border-silver-lake-blue mb-4"></div>
-                <p className="text-platinum text-sm">HSL: 212, 29%, 36%</p>
-              </CardContent>
-            </Card>
-
-            {/* Silver Lake Blue Card */}
-            <Card className="bg-silver-lake-blue border-platinum">
-              <CardHeader>
-                <CardTitle className="text-rich-black">Silver Lake Blue</CardTitle>
-                <CardDescription className="text-oxford-blue">
-                  Calming and accessible
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="w-full h-20 bg-silver-lake-blue rounded-lg border-2 border-platinum mb-4"></div>
-                <p className="text-oxford-blue text-sm">HSL: 214, 23%, 56%</p>
-              </CardContent>
-            </Card>
-
-            {/* Platinum Card */}
-            <Card className="bg-platinum border-silver-lake-blue">
-              <CardHeader>
-                <CardTitle className="text-rich-black">Platinum</CardTitle>
-                <CardDescription className="text-oxford-blue">
-                  Clean and sophisticated light
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="w-full h-20 bg-platinum rounded-lg border-2 border-silver-lake-blue mb-4"></div>
-                <p className="text-oxford-blue text-sm">HSL: 75, 6%, 87%</p>
-              </CardContent>
-            </Card>
-
-            {/* Gradient Card */}
-            <Card className="bg-gradient-secondary border-yinmn-blue">
-              <CardHeader>
-                <CardTitle className="text-rich-black">Gradient Magic</CardTitle>
-                <CardDescription className="text-oxford-blue">
-                  Beautiful transitions
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="w-full h-20 bg-gradient-primary rounded-lg mb-4"></div>
-                <p className="text-oxford-blue text-sm">Multiple gradient variations</p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="group hover:shadow-card transition-shadow duration-200">
+                <div className="aspect-video overflow-hidden rounded-t-lg">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                  />
+                </div>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-base sm:text-lg">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8 sm:mt-12">
+            <Button variant="default" size="lg" asChild>
+              <Link to="/services">
+                View All Services <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 px-4 bg-gradient-secondary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-rich-black mb-6">
-            Ready to Forge Something Amazing?
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 bg-gradient-steel">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
+            Ready to Reduce Your Fabrication Costs?
           </h2>
-          <p className="text-xl text-oxford-blue mb-8">
-            Your new color palette is ready to transform your project into something extraordinary.
+          <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+            Get a custom quote for your next project and discover how we can help you save 20-30% 
+            while maintaining Canadian quality standards.
           </p>
-          <Button 
-            size="lg"
-            className="bg-yinmn-blue hover:bg-oxford-blue text-platinum transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Start Building
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/contact">
+                Get Your Quote Today
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20" asChild>
+              <Link to="/global-network">
+                Explore Our Network
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>

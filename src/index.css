@@ -2,53 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* MapleFab Solutions Design System - Industrial B2B Theme 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Your Beautiful Color Palette */
-    --rich-black: 211 53% 11%;
-    --oxford-blue: 219 37% 17%;
-    --yinmn-blue: 212 29% 36%;
-    --silver-lake-blue: 214 23% 56%;
-    --platinum: 75 6% 87%;
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--rich-black)), hsl(var(--oxford-blue)), hsl(var(--yinmn-blue)));
-    --gradient-secondary: linear-gradient(45deg, hsl(var(--yinmn-blue)), hsl(var(--silver-lake-blue)), hsl(var(--platinum)));
-    --gradient-hero: linear-gradient(180deg, hsl(var(--rich-black)), hsl(var(--oxford-blue)));
-    --gradient-subtle: linear-gradient(90deg, hsl(var(--platinum)), hsl(var(--silver-lake-blue) / 0.3));
-    
-    /* Semantic Design System Tokens */
-    --background: var(--platinum);
-    --foreground: var(--rich-black);
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
+    /* Card components */
     --card: 0 0% 100%;
-    --card-foreground: var(--rich-black);
+    --card-foreground: 0 0% 10%;
 
+    /* Popover components */
     --popover: 0 0% 100%;
-    --popover-foreground: var(--rich-black);
+    --popover-foreground: 0 0% 10%;
 
-    --primary: var(--yinmn-blue);
-    --primary-foreground: var(--platinum);
+    /* Primary - Maple Red */
+    --primary: 351 85% 43%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 351 85% 38%;
 
-    --secondary: var(--silver-lake-blue);
-    --secondary-foreground: var(--rich-black);
+    /* Secondary - Dark Steel Gray */
+    --secondary: 213 12% 18%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: var(--silver-lake-blue);
-    --muted-foreground: var(--oxford-blue);
+    /* Muted tones - Light Gray */
+    --muted: 214 13% 97%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: var(--oxford-blue);
-    --accent-foreground: var(--platinum);
+    /* Accent - Industrial Blue */
+    --accent: 212 55% 41%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 212 55% 36%;
 
+    /* Industrial - Keep Maple Red for CTAs */
+    --industrial: 351 85% 43%;
+    --industrial-foreground: 0 0% 100%;
+    --industrial-hover: 351 85% 38%;
+
+    /* Success - Green */
+    --success: 120 50% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Destructive */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: var(--platinum);
+    --destructive-foreground: 0 0% 100%;
 
-    --border: var(--silver-lake-blue);
-    --input: var(--silver-lake-blue);
-    --ring: var(--yinmn-blue);
+    /* Borders and inputs - Light Gray */
+    --border: 214 13% 90%;
+    --input: 214 13% 90%;
+    --ring: 351 85% 43%;
+
+    /* Custom Maple gradients */
+    --gradient-steel: linear-gradient(135deg, hsl(213 12% 18%), hsl(213 12% 25%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 12% 18% / 0.95), hsl(351 85% 43% / 0.1));
+    --gradient-accent: linear-gradient(135deg, hsl(351 85% 43%), hsl(212 55% 41%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-hero: 0 25px 50px -12px hsl(213 12% 18% / 0.4);
 
     --radius: 0.5rem;
 
@@ -70,34 +85,58 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark mode with your color palette */
-    --background: var(--rich-black);
-    --foreground: var(--platinum);
+    /* Base colors - Dark Maple theme */
+    --background: 213 12% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: var(--oxford-blue);
-    --card-foreground: var(--platinum);
+    /* Card components */
+    --card: 213 12% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: var(--oxford-blue);
-    --popover-foreground: var(--platinum);
+    /* Popover components */
+    --popover: 213 12% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: var(--silver-lake-blue);
-    --primary-foreground: var(--rich-black);
+    /* Primary - Maple Red (slightly lighter for dark mode) */
+    --primary: 351 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 351 80% 60%;
 
-    --secondary: var(--oxford-blue);
-    --secondary-foreground: var(--platinum);
+    /* Secondary - Dark Steel */
+    --secondary: 213 12% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: var(--oxford-blue);
-    --muted-foreground: var(--silver-lake-blue);
+    /* Muted tones */
+    --muted: 213 12% 18%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: var(--yinmn-blue);
-    --accent-foreground: var(--platinum);
+    /* Accent - Industrial Blue (lighter for dark mode) */
+    --accent: 212 50% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 212 50% 60%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: var(--platinum);
+    /* Industrial - Maple Red */
+    --industrial: 351 80% 55%;
+    --industrial-foreground: 0 0% 100%;
+    --industrial-hover: 351 80% 60%;
 
-    --border: var(--yinmn-blue);
-    --input: var(--yinmn-blue);
-    --ring: var(--silver-lake-blue);
+    /* Success */
+    --success: 120 40% 50%;
+    --success-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 213 12% 20%;
+    --input: 213 12% 20%;
+    --ring: 351 80% 55%;
+
+    /* Dark gradients */
+    --gradient-steel: linear-gradient(135deg, hsl(213 12% 12%), hsl(213 12% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 12% 8% / 0.95), hsl(351 80% 55% / 0.1));
+    --gradient-accent: linear-gradient(135deg, hsl(351 80% 55%), hsl(212 50% 55%));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
