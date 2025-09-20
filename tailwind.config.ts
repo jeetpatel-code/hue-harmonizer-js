@@ -14,6 +14,14 @@ export default {
     },
     extend: {
       colors: {
+        // Your Custom Color Palette
+        "rich-black": "hsl(var(--rich-black))",
+        "oxford-blue": "hsl(var(--oxford-blue))",
+        "yinmn-blue": "hsl(var(--yinmn-blue))",
+        "silver-lake-blue": "hsl(var(--silver-lake-blue))",
+        platinum: "hsl(var(--platinum))",
+        
+        // Semantic tokens
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -57,6 +65,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-secondary": "var(--gradient-secondary)",
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-subtle": "var(--gradient-subtle)",
       },
       borderRadius: {
         lg: "var(--radius)",
