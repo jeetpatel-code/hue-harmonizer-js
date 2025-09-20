@@ -2,64 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* MapleFab Solutions Design System - Industrial B2B Theme 
+/* MapleFab Solutions Design System - Updated Color Palette
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Base colors */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* Base colors - Cream White background, Dark Brown text */
+    --background: 33 36% 94%;
+    --foreground: 20 18% 23%;
 
     /* Card components */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 33 36% 97%;
+    --card-foreground: 20 18% 23%;
 
     /* Popover components */
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 33 36% 97%;
+    --popover-foreground: 20 18% 23%;
 
-    /* Primary - Maple Red */
-    --primary: 351 85% 43%;
+    /* Primary - Burnt Orange */
+    --primary: 21 100% 40%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 351 85% 38%;
+    --primary-hover: 21 100% 35%;
 
-    /* Secondary - Dark Steel Gray */
-    --secondary: 213 12% 18%;
+    /* Secondary - Crimson Red */
+    --secondary: 0 100% 27%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted tones - Light Gray */
-    --muted: 214 13% 97%;
-    --muted-foreground: 0 0% 45%;
+    /* Muted tones - Lighter cream */
+    --muted: 33 36% 91%;
+    --muted-foreground: 20 18% 45%;
 
-    /* Accent - Industrial Blue */
-    --accent: 212 55% 41%;
+    /* Accent - Olive Green */
+    --accent: 82 35% 29%;
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 212 55% 36%;
+    --accent-hover: 82 35% 24%;
 
-    /* Industrial - Keep Maple Red for CTAs */
-    --industrial: 351 85% 43%;
+    /* Industrial - Burnt Orange for CTAs */
+    --industrial: 21 100% 40%;
     --industrial-foreground: 0 0% 100%;
-    --industrial-hover: 351 85% 38%;
+    --industrial-hover: 21 100% 35%;
 
-    /* Success - Green */
-    --success: 120 50% 45%;
+    /* Success - Olive Green */
+    --success: 82 35% 29%;
     --success-foreground: 0 0% 100%;
 
-    /* Destructive */
-    --destructive: 0 84.2% 60.2%;
+    /* Destructive - Crimson Red */
+    --destructive: 0 100% 27%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders and inputs - Light Gray */
-    --border: 214 13% 90%;
-    --input: 214 13% 90%;
-    --ring: 351 85% 43%;
+    /* Borders and inputs - Cream tones */
+    --border: 33 36% 88%;
+    --input: 33 36% 88%;
+    --ring: 21 100% 40%;
 
-    /* Custom Maple gradients */
-    --gradient-steel: linear-gradient(135deg, hsl(213 12% 18%), hsl(213 12% 25%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 12% 18% / 0.95), hsl(351 85% 43% / 0.1));
-    --gradient-accent: linear-gradient(135deg, hsl(351 85% 43%), hsl(212 55% 41%));
+    /* Custom gradients with new colors */
+    --gradient-steel: linear-gradient(135deg, hsl(0 100% 27%), hsl(20 18% 23%));
+    --gradient-hero: linear-gradient(135deg, hsl(20 18% 23% / 0.95), hsl(21 100% 40% / 0.1));
+    --gradient-accent: linear-gradient(135deg, hsl(21 100% 40%), hsl(82 35% 29%));
 
     /* Shadows */
     --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
@@ -85,58 +85,58 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Base colors - Dark Maple theme */
-    --background: 213 12% 8%;
-    --foreground: 0 0% 95%;
+    /* Base colors - Dark theme with new palette */
+    --background: 20 18% 12%;
+    --foreground: 33 36% 94%;
 
     /* Card components */
-    --card: 213 12% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 20 18% 15%;
+    --card-foreground: 33 36% 94%;
 
     /* Popover components */
-    --popover: 213 12% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 20 18% 15%;
+    --popover-foreground: 33 36% 94%;
 
-    /* Primary - Maple Red (slightly lighter for dark mode) */
-    --primary: 351 80% 55%;
+    /* Primary - Burnt Orange (lighter for dark mode) */
+    --primary: 21 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 351 80% 60%;
+    --primary-hover: 21 100% 55%;
 
-    /* Secondary - Dark Steel */
-    --secondary: 213 12% 15%;
-    --secondary-foreground: 0 0% 95%;
+    /* Secondary - Crimson Red (lighter for dark mode) */
+    --secondary: 0 100% 35%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted tones */
-    --muted: 213 12% 18%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 20 18% 18%;
+    --muted-foreground: 33 36% 65%;
 
-    /* Accent - Industrial Blue (lighter for dark mode) */
-    --accent: 212 50% 55%;
+    /* Accent - Olive Green (lighter for dark mode) */
+    --accent: 82 35% 40%;
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 212 50% 60%;
+    --accent-hover: 82 35% 45%;
 
-    /* Industrial - Maple Red */
-    --industrial: 351 80% 55%;
+    /* Industrial - Burnt Orange */
+    --industrial: 21 100% 50%;
     --industrial-foreground: 0 0% 100%;
-    --industrial-hover: 351 80% 60%;
+    --industrial-hover: 21 100% 55%;
 
     /* Success */
-    --success: 120 40% 50%;
+    --success: 82 35% 40%;
     --success-foreground: 0 0% 100%;
 
     /* Destructive */
-    --destructive: 0 75% 55%;
+    --destructive: 0 100% 35%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders and inputs */
-    --border: 213 12% 20%;
-    --input: 213 12% 20%;
-    --ring: 351 80% 55%;
+    --border: 20 18% 22%;
+    --input: 20 18% 22%;
+    --ring: 21 100% 50%;
 
     /* Dark gradients */
-    --gradient-steel: linear-gradient(135deg, hsl(213 12% 12%), hsl(213 12% 20%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 12% 8% / 0.95), hsl(351 80% 55% / 0.1));
-    --gradient-accent: linear-gradient(135deg, hsl(351 80% 55%), hsl(212 50% 55%));
+    --gradient-steel: linear-gradient(135deg, hsl(20 18% 15%), hsl(20 18% 22%));
+    --gradient-hero: linear-gradient(135deg, hsl(20 18% 12% / 0.95), hsl(21 100% 50% / 0.1));
+    --gradient-accent: linear-gradient(135deg, hsl(21 100% 50%), hsl(82 35% 40%));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
