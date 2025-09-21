@@ -19,28 +19,69 @@ const Contact = () => {
     timeline: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Request Submitted",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const form = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      form.append(key, value);
     });
 
-    // Reset form
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      message: "",
-      projectType: "",
-      timeline: "",
+    // Add files
+    const fileInput = document.querySelector<HTMLInputElement>('input[type="file"]');
+    if (fileInput && fileInput.files) {
+      for (let i = 0; i < fileInput.files.length; i++) {
+        const file = fileInput.files[i];
+
+        // Convert file to base64 for Apps Script
+        const base64 = await toBase64(file);
+        form.append("files[]", JSON.stringify({
+          name: file.name,
+          mimeType: file.type,
+          data: base64.split(",")[1] // remove "data:...;base64,"
+        }));
+      }
+    }
+
+    const response = await fetch("https://script.google.com/macros/s/AKfycbx7ovHNsjzjOs1tOcJa2cQKWG9aEPOBbHX59wMjN1AXgt2wZd-7g8StOWONxzFV0m_u/exec", {
+      method: "POST",
+      body: form,
     });
-  };
+
+    const result = await response.json();
+    if (result.success) {
+      toast({
+        title: "Request Submitted",
+        description: "Your project inquiry has been saved. We'll get back to you within 24 hours.",
+      });
+
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
+        projectType: "",
+        timeline: "",
+      });
+    } else {
+      toast({ title: "Error", description: result.error, variant: "destructive" });
+    }
+  } catch (err: any) {
+    toast({ title: "Error", description: err?.message, variant: "destructive" });
+  }
+};
+
+// Helper: convert file to Base64
+const toBase64 = (file: File) =>
+  new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = (error) => reject(error);
+  });
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
