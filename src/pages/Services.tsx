@@ -103,8 +103,8 @@ const Services = () => {
             Our Services
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Comprehensive fabrication and manufacturing services designed to reduce your costs 
-            while maintaining the highest quality standards.
+            At MapleFab Solutions, we deliver a complete range of fabricated and machined products designed to meet the needs of Ontario’s industrial,
+            agricultural and manufacturing sectors. Every product is backed by Canadian-level quality assurance, documentation, and local warranty.
           </p>
         </div>
       </section>
