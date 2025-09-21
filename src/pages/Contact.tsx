@@ -19,34 +19,37 @@ const Contact = () => {
     timeline: "",
   });
 
+  const toBase64 = (file: File) =>
+  new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = (error) => reject(error);
+  });
+
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   try {
-    const form = new FormData();
-    Object.entries(formData).forEach(([key, value]) => {
-      form.append(key, value);
-    });
-
-    // Add files
+    // collect files
+    const filesPayload: Array<{ name: string; mimeType: string; data: string }> = [];
     const fileInput = document.querySelector<HTMLInputElement>('input[type="file"]');
     if (fileInput && fileInput.files) {
       for (let i = 0; i < fileInput.files.length; i++) {
         const file = fileInput.files[i];
-
-        // Convert file to base64 for Apps Script
-        const base64 = await toBase64(file);
-        form.append("files[]", JSON.stringify({
-          name: file.name,
-          mimeType: file.type,
-          data: base64.split(",")[1] // remove "data:...;base64,"
-        }));
+        const base64WithPrefix = await toBase64(file); // "data:...;base64,xxxxx"
+        const base64 = base64WithPrefix.split(",")[1]; // remove prefix
+        filesPayload.push({ name: file.name, mimeType: file.type, data: base64 });
       }
     }
 
+    // full payload
+    const payload = { ...formData, files: filesPayload };
+
     const response = await fetch("https://script.google.com/macros/s/AKfycbx7ovHNsjzjOs1tOcJa2cQKWG9aEPOBbHX59wMjN1AXgt2wZd-7g8StOWONxzFV0m_u/exec", {
       method: "POST",
-      body: form,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
 
     const result = await response.json();
@@ -65,22 +68,16 @@ const handleSubmit = async (e: React.FormEvent) => {
         projectType: "",
         timeline: "",
       });
+
+      // optionally clear file input
+      if (fileInput) fileInput.value = "";
     } else {
-      toast({ title: "Error", description: result.error, variant: "destructive" });
+      toast({ title: "Error", description: result.error || "Unknown error", variant: "destructive" });
     }
   } catch (err: any) {
-    toast({ title: "Error", description: err?.message, variant: "destructive" });
+    toast({ title: "Error", description: err.message || String(err), variant: "destructive" });
   }
 };
-
-// Helper: convert file to Base64
-const toBase64 = (file: File) =>
-  new Promise<string>((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = (error) => reject(error);
-  });
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
