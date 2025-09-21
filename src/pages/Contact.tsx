@@ -46,7 +46,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     // full payload
     const payload = { ...formData, files: filesPayload };
 
-    const response = await fetch("https://script.google.com/macros/s/AKfycbx7ovHNsjzjOs1tOcJa2cQKWG9aEPOBbHX59wMjN1AXgt2wZd-7g8StOWONxzFV0m_u/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzmvjeZQLfdJ9v5buWTMrD1VWbmhDFwX_borItzDVeq7Kqa_dLrS0NoH_C7u3DKrRq3/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
