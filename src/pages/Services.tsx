@@ -11,26 +11,28 @@ const Services = () => {
   const services = [
     {
       icon: Globe,
-      title: "Global Sourcing & Supply",
-      description: "Comprehensive sourcing solutions connecting you with trusted South Asian manufacturers while maintaining Canadian quality standards.",
+      title: "Precision Machined Components",
+      description: "From precision small components to large shafts and housings, we provide comprehensive machining services.",
       image: platformImage,
       features: [
-        "Vendor qualification and auditing",
-        "Supply chain management",
-        "Cost optimization strategies",
-        "Risk mitigation protocols"
+        "CNC lathe jobs up to Ø600 mm × 4000 mm length",
+        "Vertical turning (VTL) up to 4500 × 5000 mm",
+        "Floor-type boring machines up to 3 m travel",
+        "Conventional lathe machining (bed length up to 30 ft)",
+        "Radial drilling up to Ø70 mm",
+        "Full QA with verniers, micrometers, and bore gauges"
       ]
     },
     {
       icon: Cog,
-      title: "Precision Machining",
-      description: "State-of-the-art CNC machining services for complex steel components with tight tolerances and superior surface finishes.",
+      title: "Fabrication & Weldments",
+      description: "We build reliable, cost-effective fabricated structures and assemblies that include.",
       image: machiningImage,
       features: [
-        "Multi-axis CNC machining",
-        "Precision tolerances ±0.001\"",
-        "Complex geometries",
-        "Surface finishing options"
+        "Structural steel platforms, skids, and mezzanines",
+        "Welded frames, guards, hoppers, and ducts",
+        "Custom assemblies per drawing with packaging and kitting",
+        "Heavy-duty weldments with machining integration"
       ]
     },
     {
@@ -47,26 +49,24 @@ const Services = () => {
     },
     {
       icon: CheckCircle,
-      title: "Quality Assurance",
-      description: "Comprehensive quality control processes ensuring every project meets or exceeds Canadian industrial standards.",
+      title: "Storage Tanks (Non-Pressure)",
+      description: "Cost-effective tanks engineered to Canadian expectations.",
       image: teamImage,
       features: [
-        "Material certifications",
-        "Dimensional inspections",
-        "NDT testing available",
-        "Complete documentation packages"
+        "Water, fertilizer, and chemical tanks (1–100 m³)",
+        "Options for manways, ladders, coatings, and internals",
+        "QA and dimensional checks are included with each batch,
       ]
     },
     {
       icon: Truck,
-      title: "Logistics & Delivery",
-      description: "End-to-end logistics management from manufacturing facility to your Ontario location with full tracking and insurance.",
+      title: "Heavy-Duty Assemblies",
+      description: "Ready to install Industrial-scale assemblies.",
       image: platformImage,
       features: [
-        "International shipping coordination",
-        "Customs clearance management",
-        "Local delivery in Ontario",
-        "Project timeline management"
+        "Large machine bases and housings",
+        "Combined fabrication + machining assemblies",
+        "Shipped with full inspection reports and dimensional QA",
       ]
     }
   ];
