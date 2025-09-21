@@ -1,19 +1,20 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Cog, Shield, Truck, Globe, CheckCircle } from "lucide-react";
-import tanksImage from "@/assets/steel-tanks.jpg";
-import machiningImage from "@/assets/cnc-machining.jpg";
-import platformImage from "@/assets/steel-platform.jpg";
-import teamImage from "@/assets/team-engineers.jpg";
+import { ArrowRight, Settings, Hammer, Zap, Container, Package, CheckCircle } from "lucide-react";
+import precisionImage from "@/assets/precision-machining.jpg";
+import fabricationImage from "@/assets/steel-fabrication.jpg";
+import weldmentsImage from "@/assets/custom-weldments.jpg";
+import storageImage from "@/assets/storage-tanks.jpg";
+import assembliesImage from "@/assets/heavy-assemblies.jpg";
 
 const Services = () => {
   const services = [
     {
-      icon: Globe,
+      icon: Settings,
       title: "Precision Machined Components",
       description: "From precision small components to large shafts and housings, we provide comprehensive machining services.",
-      image: platformImage,
+      image: precisionImage,
       features: [
         "CNC lathe jobs up to Ø600 mm × 4000 mm length",
         "Vertical turning (VTL) up to 4500 × 5000 mm",
@@ -24,10 +25,10 @@ const Services = () => {
       ]
     },
     {
-      icon: Cog,
-      title: "Fabrication & Weldments",
-      description: "We build reliable, cost-effective fabricated structures and assemblies that include.",
-      image: machiningImage,
+      icon: Hammer,
+      title: "Steel Fabrication & Welding",
+      description: "We build reliable, cost-effective fabricated structures and assemblies that include structural steel work.",
+      image: fabricationImage,
       features: [
         "Structural steel platforms, skids, and mezzanines",
         "Welded frames, guards, hoppers, and ducts",
@@ -36,10 +37,10 @@ const Services = () => {
       ]
     },
     {
-      icon: Shield,
-      title: "Fabrication & Weldments",
+      icon: Zap,
+      title: "Custom Weldments & Assemblies",
       description: "Custom steel fabrication including structural frames, platforms, and heavy-duty assemblies built to your exact specifications.",
-      image: tanksImage,
+      image: weldmentsImage,
       features: [
         "Structural steel fabrication",
         "Custom weldments",
@@ -48,10 +49,10 @@ const Services = () => {
       ]
     },
     {
-      icon: CheckCircle,
+      icon: Container,
       title: "Storage Tanks (Non-Pressure)",
       description: "Cost-effective tanks engineered to Canadian expectations.",
-      image: teamImage,
+      image: storageImage,
       features: [
         "Water, fertilizer, and chemical tanks (1–100 m³)",
         "Options for manways, ladders, coatings, and internals",
@@ -59,10 +60,10 @@ const Services = () => {
       ]
     },
     {
-      icon: Truck,
+      icon: Package,
       title: "Heavy-Duty Assemblies",
       description: "Ready to install Industrial-scale assemblies.",
-      image: platformImage,
+      image: assembliesImage,
       features: [
         "Large machine bases and housings",
         "Combined fabrication + machining assemblies",
