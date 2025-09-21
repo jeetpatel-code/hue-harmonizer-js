@@ -1,41 +1,58 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Globe, MapPin, Users, Award, CheckCircle, Factory } from "lucide-react";
-import tanksImage from "@/assets/steel-tanks.jpg";
-import machiningImage from "@/assets/cnc-machining.jpg";
-import platformImage from "@/assets/steel-platform.jpg";
+import { ArrowRight, Globe, MapPin, Settings, Hammer, FileText, Scale, CheckCircle, Award } from "lucide-react";
+import machiningCapacityImage from "@/assets/machining-capacity.jpg";
+import fabricationCapacityImage from "@/assets/fabrication-capacity.jpg";
+import qaInspectionImage from "@/assets/qa-inspection.jpg";
+import scalableResourcesImage from "@/assets/scalable-resources.jpg";
 import teamImage from "@/assets/team-engineers.jpg";
 
 const GlobalNetwork = () => {
   const capabilities = [
     {
-      icon: Factory,
-      title: "Precision Machining",
-      description: "State-of-the-art CNC facilities with multi-axis capabilities for complex components.",
-      image: machiningImage,
-      specs: ["5-axis CNC centers", "Tolerances to ±0.001\"", "Materials: Steel, Stainless, Aluminum"]
+      icon: Settings,
+      title: "Machining Capacity",
+      description: "CNC lathe up to Ø600 mm × 4000 mm length",
+      image: machiningCapacityImage,
+      specs: [
+        "CNC lathe up to Ø600 mm × 4000 mm length",
+        "Vertical turning lathes (VTL) up to 4500 × 5000 mm",
+        "Boring machines, floor type up to 3 m travel",
+        "Conventional lathe machining (bed length up to 30 ft)",
+        "Radial drilling up to Ø70 mm"
+      ]
     },
     {
-      icon: Globe,
-      title: "Fabrication & Weldments",
-      description: "Heavy-duty fabrication capabilities for structural steel and custom assemblies.",
-      image: platformImage,
-      specs: ["Welding certifications (AWS/ASME)", "Structural steel up to 50 tons", "Custom fabrication"]
+      icon: Hammer,
+      title: "Fabrication Capacity",
+      description: "Platforms, tanks, hoppers, guards, and ducts",
+      image: fabricationCapacityImage,
+      specs: [
+        "Platforms, tanks, hoppers, guards, and ducts",
+        "Heavy-duty welded subassemblies",
+        "Integrated machining + fabrication setups"
+      ]
     },
     {
-      icon: Users,
-      title: "Storage Tanks",
-      description: "Non-pressure tank manufacturing with professional coatings and safety features.",
-      image: tanksImage,
-      specs: ["Capacities up to 10,000L", "Multiple coating options", "Safety compliance"]
+      icon: FileText,
+      title: "QA & Inspection",
+      description: "Precision measuring tools: verniers, micrometers up to 700 mm, bore gauges",
+      image: qaInspectionImage,
+      specs: [
+        "Precision measuring tools: verniers, micrometers up to 700 mm, bore gauges",
+        "Weld maps, mill test certificates, and dimensional reports"
+      ]
     },
     {
-      icon: Award,
-      title: "Heavy-Duty Assemblies",
-      description: "Complex mechanical assemblies and industrial equipment manufacturing.",
-      image: teamImage,
-      specs: ["Assembly capabilities", "Testing facilities", "Quality documentation"]
+      icon: Scale,
+      title: "Scalable Resources",
+      description: "Multiple vetted facilities across South Asia",
+      image: scalableResourcesImage,
+      specs: [
+        "Multiple vetted facilities across South Asia",
+        "Resources for both small runs and bulk manufacturing"
+      ]
     }
   ];
 
