@@ -55,7 +55,7 @@ const Services = () => {
       features: [
         "Water, fertilizer, and chemical tanks (1–100 m³)",
         "Options for manways, ladders, coatings, and internals",
-        "QA and dimensional checks are included with each batch
+        "QA and dimensional checks are included with each batch"
       ]
     },
     {
