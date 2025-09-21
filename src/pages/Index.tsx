@@ -49,7 +49,7 @@ const Index = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Global Fabrication Power.
-            <span className="block text-accent">Canadian Assurance.</span>
+            <span className="block text-primary">Canadian Assurance.</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
             Helping Ontario companies cut fabrication costs by 20–30% with trusted South Asian manufacturers.
