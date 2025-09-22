@@ -83,17 +83,6 @@ export function Footer() {
           <p className="text-muted-foreground text-sm">
             © 2024 MapleFab Solutions Inc. All rights reserved.
           </p>
-          <div className="flex items-center space-x-4">
-            <a 
-              href="https://www.maplefabsolutions.ca" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors flex items-center space-x-1"
-            >
-              <span className="text-sm">Visit Website</span>
-              <ExternalLink className="h-3 w-3" />
-            </a>
-          </div>
         </div>
       </div>
     </footer>
