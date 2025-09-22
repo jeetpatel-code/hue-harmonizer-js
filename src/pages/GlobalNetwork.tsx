@@ -275,11 +275,6 @@ const GlobalNetwork = () => {
                 Start Your Project
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20" asChild>
-              <Link to="/partners">
-                View Our Partners
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
