@@ -286,18 +286,13 @@ const Industries = () => {
             Ready to Discuss Your Industry Requirements?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Every industry has unique challenges. Let's discuss how our experience and 
+            Every industry has unique challenges. Let's discuss how our experience and the 
             global manufacturing network can address your specific requirements.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className=" flex flex-col sm:flex-row justify-center">
             <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
                 Start the Conversation
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20" asChild>
-              <Link to="/services">
-                View Our Services
               </Link>
             </Button>
           </div>

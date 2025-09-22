@@ -10,7 +10,6 @@ const navigationItems = [
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Global Network", href: "/global-network" },
-  { name: "Partners", href: "/partners" },
   { name: "Industries", href: "/industries" },
   { name: "Contact", href: "/contact" },
 ];
