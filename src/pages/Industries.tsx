@@ -188,12 +188,6 @@ const Industries = () => {
                           ))}
                         </div>
                       </div>
-
-                      <Button variant="industrial" asChild>
-                        <Link to="/contact">
-                          Discuss Your Project <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
                     </CardContent>
                   </div>
                 </div>
