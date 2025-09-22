@@ -135,11 +135,6 @@ const GlobalNetwork = () => {
                 facility audits, quality system reviews, and capability assessments to ensure they 
                 can deliver the reliability and quality Canadian companies expect.
               </p>
-              <Button variant="industrial" asChild>
-                <Link to="/partners">
-                  Meet Our Partners <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
             </div>
             <div className="relative">
               <img 
@@ -278,6 +273,11 @@ const GlobalNetwork = () => {
             <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
                 Start Your Project
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20" asChild>
+              <Link to="/partners">
+                View Our Partners
               </Link>
             </Button>
           </div>
