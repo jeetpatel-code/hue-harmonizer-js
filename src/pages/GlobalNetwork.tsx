@@ -274,7 +274,7 @@ const GlobalNetwork = () => {
             Contact us to discuss how our global manufacturing network can help reduce your 
             project costs while maintaining the quality standards you require.
           </p>
-          <div className=" flex flex-col sm:flex-row justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
                 Start Your Project
