@@ -134,11 +134,6 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="industrial" asChild>
-                    <Link to="/contact">
-                      Get Quote <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
                   <img 
