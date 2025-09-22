@@ -20,16 +20,16 @@ export function Footer() {
             </p>
             <div className="space-y-2 text-sm sm:text-base">
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-muted-foreground" />
-                <span>(XXX) XXX-XXXX</span>
+                <Phone className="h-4 w-4 text-accent" />
+                <span className="text-muted-foreground">(XXX) XXX-XXXX</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-muted-foreground" />
-                <span>info@maplefabsolutions.ca</span>
+                <Mail className="h-4 w-4 text-accent" />
+                <span className="text-muted-foreground">info@maplefabsolutions.ca</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-muted-foreground" />
-                <span>Ontario, Canada</span>
+                <MapPin className="h-4 w-4 text-accent" />
+                <span className="text-muted-foreground">Ontario, Canada</span>
               </div>
             </div>
           </div>
