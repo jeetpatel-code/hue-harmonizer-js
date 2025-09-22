@@ -11,7 +11,6 @@ const navigationItems = [
   { name: "Services", href: "/services" },
   { name: "Global Network", href: "/global-network" },
   { name: "Industries", href: "/industries" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export function Navigation() {
