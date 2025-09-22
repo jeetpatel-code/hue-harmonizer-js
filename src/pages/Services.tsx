@@ -160,7 +160,7 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Our Process
             </h2>
-            <p className="text-lg text-white max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               A streamlined approach that ensures quality results and transparent communication 
               throughout your project.
             </p>
@@ -176,11 +176,6 @@ const Services = () => {
                 <CardContent>
                   <p className="text-muted-foreground">{step.description}</p>
                 </CardContent>
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="h-6 w-6 text-accent" />
-                  </div>
-                )}
               </Card>
             ))}
           </div>
