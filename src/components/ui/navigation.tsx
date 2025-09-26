@@ -47,7 +47,9 @@ export function Navigation() {
               </Link>
             ))}
             <Button variant="default" size="sm" asChild>
-              <Link to="/contact">Request Quote</Link>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRrp8a6kTWOFLy-ZC5uRRg5h8K0IHA2JV30xo-tk84gEdgrQ/viewform" target="_blank" rel="noopener noreferrer">
+                  Request Quote
+                </a>
             </Button>
           </div>
 
