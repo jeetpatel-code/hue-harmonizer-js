@@ -26,9 +26,8 @@ export function Navigation() {
             <img 
               src={logoImage} 
               alt="MapleFab Solutions Logo" 
-              className="w-10 h-10 object-contain"
+              className="h-10 w-auto object-contain"
             />
-            <span className="font-bold text-xl text-primary">MapleFab Solutions</span>
           </Link>
 
           {/* Desktop Navigation */}

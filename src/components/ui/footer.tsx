@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import logoImage from "@/assets/logo-maplefab.png";
 
 export function Footer() {
   return (
@@ -8,11 +9,12 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="col-span-1 sm:col-span-2">
-            <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-              <div className="w-8 h-8 bg-gradient-accent rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-sm">MF</span>
-              </div>
-              <span className="font-bold text-lg sm:text-xl text-primary">MapleFab Solutions Inc.</span>
+            <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+              <img 
+                src={logoImage} 
+                alt="MapleFab Solutions Logo" 
+                className="h-12 w-auto object-contain"
+              />
             </div>
             <p className="text-muted-foreground mb-3 sm:mb-4 max-w-md text-sm sm:text-base">
               MapleFab Solutions Inc. supplies fabricated steel products, tanks, weldments, and precision machining to Ontario industries - combining global cost savings with Canadian quality assurance.
