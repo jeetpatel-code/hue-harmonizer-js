@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "@/assets/logo-maplefab.png";
+import logoImage from "@/assets/logo-new.png";
 
 const navigationItems = [
   { name: "Home", href: "/" },
@@ -26,8 +26,12 @@ export function Navigation() {
             <img 
               src={logoImage} 
               alt="MapleFab Solutions Logo" 
-              className="h-[4.2rem] w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
+            <div className="flex flex-col leading-tight">
+              <span className="font-bold text-xl text-[hsl(16,75%,50%)]">MapleFab</span>
+              <span className="font-bold text-xl text-[hsl(16,75%,50%)]">Solutions</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

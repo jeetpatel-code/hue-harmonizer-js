@@ -56,9 +56,9 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRrp8a6kTWOFLy-ZC5uRRg5h8K0IHA2JV30xo-tk84gEdgrQ/viewform" target="_blank" rel="noopener noreferrer">
                 Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
               Download Brochures
@@ -179,9 +179,9 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRrp8a6kTWOFLy-ZC5uRRg5h8K0IHA2JV30xo-tk84gEdgrQ/viewform" target="_blank" rel="noopener noreferrer">
                 Get Your Quote Today
-              </Link>
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20" asChild>
               <Link to="/global-network">

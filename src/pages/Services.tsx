@@ -189,9 +189,9 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRrp8a6kTWOFLy-ZC5uRRg5h8K0IHA2JV30xo-tk84gEdgrQ/viewform" target="_blank" rel="noopener noreferrer">
                 Request Your Quote
-              </Link>
+              </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link to="/global-network">
