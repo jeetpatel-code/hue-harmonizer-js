@@ -26,7 +26,7 @@ export function Navigation() {
             <img 
               src={logoImage} 
               alt="MapleFab Solutions Logo" 
-              className="h-16 w-auto object-contain"
+              className="h-[4.2rem] w-auto object-contain"
             />
           </Link>
 
