@@ -15,7 +15,7 @@ export function Footer() {
                 alt="MapleFab Solutions Logo" 
                 className="h-20 w-auto object-contain"
               />
-              <span className="font-bold text-4xl text-primary ml-0">MapleFab Solutions</span>
+              <span className="font-bold text-4xl text-primary !ml-0">MapleFab Solutions</span>
             </div>
             <p className="text-muted-foreground mb-3 sm:mb-4 max-w-md text-sm sm:text-base">
               MapleFab Solutions Inc. supplies fabricated steel products, tanks, weldments, and precision machining to Ontario industries - combining global cost savings with Canadian quality assurance.
