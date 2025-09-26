@@ -97,13 +97,13 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: Mail,
       title: "Email", 
-      details: "info@maplefabsolutions.com",
+      details: "info@maplefabsolutions.ca",
       description: "We respond within 24 hours"
     },
     {
       icon: MapPin,
       title: "Ontario Headquarters",
-      details: "Ontario, Canada",
+      details: "Brampton, Canada",
       description: "Serving all of Ontario and beyond"
     },
     {

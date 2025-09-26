@@ -27,11 +27,11 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <span className="text-muted-foreground">info@maplefabsolutions.com</span>
+                <span className="text-muted-foreground">info@maplefabsolutions.ca</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span className="text-muted-foreground">Ontario, Canada</span>
+                <span className="text-muted-foreground">Brampton, Canada</span>
               </div>
             </div>
           </div>
