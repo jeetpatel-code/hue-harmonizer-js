@@ -23,15 +23,11 @@ export function Footer() {
             <div className="space-y-2 text-sm sm:text-base">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-accent" />
-                <a href="tel:+12896230280" className="text-muted-foreground no-underline hover:underline">
-                  +1 (289) 623-0280
-                </a>
+                <span className="text-muted-foreground">(XXX) XXX-XXXX</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <a href="mailto:info@maplefabsolutions.co" className="text-muted-foreground no-underline hover:underline">
-                  info@maplefabsolutions.co
-                </a>
+                <span className="text-muted-foreground">info@maplefabsolutions.ca</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-accent" />
@@ -87,7 +83,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-6 sm:mt-8 pt-6 sm:pt-8 flex flex-col sm:justify-between items-center space-y-4 sm:space-y-0">
           <p className="text-muted-foreground text-sm">
-            © 2025 MapleFab Solutions. All rights reserved.
+            © 2024 MapleFab Solutions. All rights reserved.
           </p>
         </div>
       </div>
