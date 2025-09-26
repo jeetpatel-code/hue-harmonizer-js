@@ -87,7 +87,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-6 sm:mt-8 pt-6 sm:pt-8 flex flex-col sm:justify-between items-center space-y-4 sm:space-y-0">
           <p className="text-muted-foreground text-sm">
-            © 2024 MapleFab Solutions Inc. All rights reserved.
+            © 2025 MapleFab Solutions. All rights reserved.
           </p>
         </div>
       </div>
