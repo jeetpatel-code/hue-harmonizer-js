@@ -16,8 +16,8 @@ export function Footer() {
                 className="h-16 w-auto object-contain"
               />
               <div className="flex flex-col leading-tight">
-                <span className="font-bold text-xl text-[#b52035 ]">MapleFab</span>
-                <span className="font-bold text-xl text-[#b52035 ]">Solutions</span>
+                <span className="font-bold text-xl text-[#b52035]">MapleFab</span>
+                <span className="font-bold text-xl text-[#b52035]">Solutions</span>
               </div>
             </div>
             <p className="text-muted-foreground mb-3 sm:mb-4 max-w-md text-sm sm:text-base">
