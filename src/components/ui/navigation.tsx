@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "@/assets/logo-new.png";
+import logoImage from "@/assets/logo-maplefab.png";
 
 const navigationItems = [
   { name: "Home", href: "/" },
@@ -26,12 +26,8 @@ export function Navigation() {
             <img 
               src={logoImage} 
               alt="MapleFab Solutions Logo" 
-              className="h-12 w-auto object-contain"
+              className="h-[4.2rem] w-auto object-contain"
             />
-            <div className="flex flex-col leading-tight">
-              <span className="font-bold text-xl text-[hsl(16,75%,50%)]">MapleFab</span>
-              <span className="font-bold text-xl text-[hsl(16,75%,50%)]">Solutions</span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -86,9 +82,9 @@ export function Navigation() {
               ))}
               <div className="px-3 py-2">
                 <Button variant="default" size="sm" className="w-full" asChild>
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRrp8a6kTWOFLy-ZC5uRRg5h8K0IHA2JV30xo-tk84gEdgrQ/viewform" target="_blank" rel="noopener noreferrer">
                     Request Quote
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
