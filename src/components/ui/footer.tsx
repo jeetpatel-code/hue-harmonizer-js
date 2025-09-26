@@ -15,8 +15,7 @@ export function Footer() {
               <span className="font-bold text-lg sm:text-xl text-primary">MapleFab Solutions Inc.</span>
             </div>
             <p className="text-muted-foreground mb-3 sm:mb-4 max-w-md text-sm sm:text-base">
-              Ontario-based supplier bridging Canadian assurance with South Asian manufacturing excellence. 
-              Helping companies achieve 20-30% cost savings with trusted global partnerships.
+              MapleFab Solutions Inc. supplies fabricated steel products, tanks, weldments, and precision machining to Ontario industries - combining global cost savings with Canadian quality assurance.
             </p>
             <div className="space-y-2 text-sm sm:text-base">
               <div className="flex items-center space-x-2">
