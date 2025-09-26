@@ -32,8 +32,8 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <a href="mailto:info@maplefabsolutions.co" className="text-muted-foreground no-underline hover:underline">
-                  info@maplefabsolutions.co
+                <a href="mailto:info@maplefabsolutions.com" className="text-muted-foreground no-underline hover:underline">
+                  info@maplefabsolutions.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">
