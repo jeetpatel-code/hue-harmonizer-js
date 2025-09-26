@@ -103,7 +103,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: MapPin,
       title: "Ontario Headquarters",
-      details: "Brampton, Canada",
+      details: "Ontario, ON",
       description: "Serving all of Ontario and beyond"
     },
     {
