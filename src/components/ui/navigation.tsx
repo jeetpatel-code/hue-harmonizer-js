@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "@/assets/logo-maplefab.png";
+import logoImage from "@/assets/logo-new.png";
 
 const navigationItems = [
   { name: "Home", href: "/" },
