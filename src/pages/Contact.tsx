@@ -97,7 +97,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: Mail,
       title: "Email", 
-      details: "info@maplefabsolutions.ca",
+      details: "info@maplefabsolutions.com",
       description: "We respond within 24 hours"
     },
     {
