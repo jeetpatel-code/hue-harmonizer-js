@@ -15,7 +15,7 @@ export function Footer() {
                 alt="MapleFab Solutions Logo" 
                 className="h-16 w-auto object-contain"
               />
-              <div className="flex flex-col leading-tight">
+              <div className="flex flex-col leading-tight !ml-0">
                 <span className="font-bold text-sm !text-[#b52035] !ml-0">MapleFab</span>
                 <span className="font-bold text-sm !text-[#b52035] !ml-0">Solutions</span>
               </div>
