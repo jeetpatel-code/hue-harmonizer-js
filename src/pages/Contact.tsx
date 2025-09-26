@@ -91,7 +91,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: Phone,
       title: "Phone",
-      details: "(XXX) XXX-XXXX",
+      details: "+1(289)623-0280",
       description: "Monday - Friday, 8:00 AM - 6:00 PM EST"
     },
     {
@@ -103,7 +103,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: MapPin,
       title: "Ontario Headquarters",
-      details: "Ontario, ON",
+      details: "Ontario, Canada",
       description: "Serving all of Ontario and beyond"
     },
     {
@@ -208,7 +208,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="(XXX) XXX-XXXX"
+                        placeholder="+1(289)623-0280"
                       />
                     </div>
                   </div>
