@@ -13,7 +13,7 @@ export function Footer() {
               <img 
                 src={logoImage} 
                 alt="MapleFab Solutions Logo" 
-                className="h-12 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             </div>
             <p className="text-muted-foreground mb-3 sm:mb-4 max-w-md text-sm sm:text-base">
