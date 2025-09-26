@@ -2,9 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Building, Droplets, Pickaxe, Wheat, Factory, Cog } from "lucide-react";
-import platformImage from "@/assets/steel-platform.jpg";
-import tanksImage from "@/assets/steel-tanks.jpg";
-import machiningImage from "@/assets/cnc-machining.jpg";
 
 const Industries = () => {
   const industries = [
@@ -12,7 +9,6 @@ const Industries = () => {
       icon: Building,
       title: "EPC Contractors", 
       description: "Engineering, Procurement, and Construction companies requiring custom fabrication for large-scale industrial projects.",
-      image: platformImage,
       applications: [
         "Structural steel frameworks",
         "Platform and walkway systems",
@@ -25,7 +21,6 @@ const Industries = () => {
       icon: Wheat,
       title: "Agriculture & Fertilizer",
       description: "Agricultural processing and fertilizer manufacturing facilities needing specialized equipment and storage solutions.",
-      image: tanksImage,
       applications: [
         "Storage tanks and silos",
         "Conveyor system components",
@@ -38,7 +33,6 @@ const Industries = () => {
       icon: Droplets,
       title: "Water & Wastewater",
       description: "Municipal and industrial water treatment facilities requiring durable, compliant fabrication solutions.",
-      image: tanksImage,
       applications: [
         "Treatment tank fabrication",
         "Pipe and fitting assemblies",
@@ -51,7 +45,6 @@ const Industries = () => {
       icon: Pickaxe,
       title: "Mining & Aggregates",
       description: "Mining operations and aggregate processing facilities needing heavy-duty, wear-resistant components.",
-      image: machiningImage,
       applications: [
         "Crusher components",
         "Conveyor system parts",
@@ -64,7 +57,6 @@ const Industries = () => {
       icon: Factory,
       title: "Food & Agri-Processing",
       description: "Food processing and agricultural facilities requiring sanitary, FDA-compliant fabrication solutions.",
-      image: platformImage,
       applications: [
         "Sanitary process equipment",
         "Food-grade storage tanks",
@@ -77,7 +69,6 @@ const Industries = () => {
       icon: Cog,
       title: "General Manufacturing",
       description: "Manufacturing facilities across various industries needing custom fabrication and precision machining services.",
-      image: machiningImage,
       applications: [
         "Custom machinery components",
         "Production line equipment",
@@ -140,56 +131,47 @@ const Industries = () => {
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, index) => (
-              <Card key={index} className="overflow-hidden shadow-card">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-                  <div className={`aspect-video lg:aspect-auto overflow-hidden ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <img 
-                      src={industry.image} 
-                      alt={`${industry.title} applications`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className={`p-8 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                    <CardHeader className="p-0 mb-6">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center">
-                          <industry.icon className="h-6 w-6 text-white" />
-                        </div>
-                        <CardTitle className="text-2xl font-bold text-primary">
-                          {industry.title}
-                        </CardTitle>
+              <Card key={index} className="overflow-hidden shadow-card h-full">
+                <div className="p-6">
+                  <CardHeader className="p-0 mb-6">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center">
+                        <industry.icon className="h-6 w-6 text-white" />
                       </div>
-                    </CardHeader>
+                      <CardTitle className="text-xl font-bold text-primary">
+                        {industry.title}
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  
+                  <CardContent className="p-0">
+                    <p className="text-muted-foreground mb-6">{industry.description}</p>
                     
-                    <CardContent className="p-0">
-                      <p className="text-muted-foreground mb-6">{industry.description}</p>
-                      
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-primary mb-3">Common Applications</h4>
-                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                          {industry.applications.map((app, appIndex) => (
-                            <li key={appIndex} className="flex items-start space-x-2">
-                              <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                              <span className="text-sm text-muted-foreground">{app}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-primary mb-3">Common Applications</h4>
+                      <ul className="space-y-2">
+                        {industry.applications.map((app, appIndex) => (
+                          <li key={appIndex} className="flex items-start space-x-2">
+                            <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground">{app}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-primary mb-3">Key Benefits</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {industry.benefits.map((benefit, benefitIndex) => (
-                            <span key={benefitIndex} className="px-3 py-1 bg-success/10 text-success rounded-full text-sm">
-                              {benefit}
-                            </span>
-                          ))}
-                        </div>
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-primary mb-3">Key Benefits</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {industry.benefits.map((benefit, benefitIndex) => (
+                          <span key={benefitIndex} className="px-3 py-1 bg-success/10 text-success rounded-full text-sm">
+                            {benefit}
+                          </span>
+                        ))}
                       </div>
-                    </CardContent>
-                  </div>
+                    </div>
+                  </CardContent>
                 </div>
               </Card>
             ))}
