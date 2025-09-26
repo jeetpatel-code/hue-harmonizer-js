@@ -29,7 +29,9 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <span className="text-muted-foreground">info@maplefabsolutions.ca</span>
+                <a href="mailto:info@maplefabsolutions.co" className="text-muted-foreground no-underline hover:underline">
+                  info@maplefabsolutions.co
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-accent" />
