@@ -8,7 +8,9 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "yarn run build && aws s3 sync dist/ s3://maplefab --delete && aws cloudfront create-invalidation --distribution-id E3RTFXQAD0BEGT --paths '/*'"
+
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
